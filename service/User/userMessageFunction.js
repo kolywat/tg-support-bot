@@ -26,7 +26,7 @@ export default async function userMessageFunction(ctx) {
 
       const { tableMessage, keyboardButtons } = await buildQuestionTable();
 
-      await ctx.telegram.sendMessage(ENV.GroupChatId, tableMessage, {
+      await ctx.telegram.sendMessage(ENV.GROUP_CHAT_ID, tableMessage, {
         parse_mode: "HTML",
         reply_markup: {
           inline_keyboard: keyboardButtons,
